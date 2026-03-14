@@ -83,3 +83,14 @@
 - `fact_player_match` will be the main base table for analysis.
 - This table will later feed player-level aggregation, clustering features, and winning-driver analysis.
 - Rankings data will not be separately integrated in v1 unless needed later.
+
+## Raw Source Schema Notes
+
+### Match files
+- Match files contain winner-side and loser-side fields in a denormalized structure.
+- Rankings and ranking points are already included in the match files.
+- Player performance stats are available separately for winner and loser.
+
+### Player file
+- `atp_players.csv` is a reference table with player-level biographical fields.
+- It can be used to validate or enrich player identity fields later if needed.
