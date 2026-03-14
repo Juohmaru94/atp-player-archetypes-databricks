@@ -13,5 +13,5 @@
 
 ## Target Table 1
 * Table name: fact_player_match
-    Purpose: normalized table for analysis, where each match becomes two rows: one for the winner and one for the loser
+— Purpose: normalized table for analysis, where each match becomes two rows: one for the winner and one for the loser
 * Grain: one row per player per match
