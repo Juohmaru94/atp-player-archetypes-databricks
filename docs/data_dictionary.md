@@ -174,6 +174,69 @@
   - Lower-Power Grinder
   - Elite Big Server
 
+### `first_serve_in_win_rate_buckets`
+- Source: `fact_player_match`
+- Grain: one row per first-serve-in percentage bucket
+- Main use:
+  - analyze how match win rate changes across first-serve-in percentage ranges
+- Notes:
+  - this is descriptive analysis
+  - it shows association, not causation
+
+### `first_serve_points_won_win_rate_buckets`
+- Source: `fact_player_match`
+- Grain: one row per first-serve-points-won percentage bucket
+- Main use:
+  - analyze how win rate changes across first-serve effectiveness ranges
+- Notes:
+  - this is descriptive analysis
+  - it shows association, not causation
+
+### `second_serve_win_rate_buckets`
+- Source: `fact_player_match`
+- Grain: one row per second-serve-win-rate bucket
+- Main use:
+  - analyze how win rate changes across second-serve effectiveness ranges
+- Notes:
+  - this is descriptive analysis
+  - it shows association, not causation
+ 
+### `insight_summary_table`
+- Source:
+  - `first_serve_in_win_rate_buckets`
+  - `first_serve_points_won_win_rate_buckets`
+  - `second_serve_win_rate_buckets`
+- Grain: one row per metric and bucket
+- Main use:
+  - compare descriptive win-rate relationships across key serving metrics
+
+### `break_points_saved_rate_buckets`
+- Source: `fact_player_match`
+- Grain: one row per break-points-saved-rate bucket
+- Main use:
+  - analyze how win rate changes across break-point defense ranges
+- Notes:
+  - this is descriptive analysis
+  - it shows association, not causation
+
+### `aces_per_match_buckets`
+- Source: `fact_player_match`
+- Grain: one row per ace-count bucket
+- Main use:
+  - analyze how win rate changes across ace volume ranges
+- Notes:
+  - this is descriptive analysis
+  - it shows association, not causation
+
+### `double_fault_buckets`
+- Source: `fact_player_match`
+- Grain: one row per double-fault-count bucket
+- Main use:
+  - analyze how win rate changes across double-fault ranges
+- Notes:
+  - this is descriptive analysis
+  - it shows association, not causation
+
 ## Bronze Output
 
 ### `bronze_atp_matches`
