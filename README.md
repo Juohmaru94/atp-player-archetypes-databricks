@@ -316,6 +316,7 @@ All credit for source data collection and publication belongs to the original da
 - `docs/player_case_study_stefanos_tsitsipas.md`
 - `docs/player_case_study_daniil_medvedev.md`
 - `docs/player_comparison_tsitsipas_vs_medvedev.md`
+- `docs/archetype_definitions.md`
 
 ## Resume-ready project summary
 - Built an end-to-end Databricks analytics pipeline (bronze/silver/gold) for historical ATP singles match data, transforming raw public files into dashboard-ready analytical marts.

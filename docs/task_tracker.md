@@ -58,4 +58,6 @@
 - [ ] Organize chart index
 - [ ] Add results and visuals to README later
 - [ ] Add limitations summary
+- [ ] Add archetype definitions document
 - [ ] Prepare final portfolio commit
+
