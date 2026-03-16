@@ -29,8 +29,35 @@ The objective is to show practical, job-ready skills in modern analytics enginee
 - **Version control:** Git + GitHub
 - **Data concepts:** ETL, feature engineering, dimensional modeling principles, data quality checks
 
+## Best Starting Points
+
+If you are reviewing this repository for the first time, start here:
+
+- `docs/results_summary.md`
+- `docs/project_highlights.md`
+- `docs/insights.md`
+- `docs/player_comparison_tsitsipas_vs_medvedev.md`
+- `docs/chart_index.md`
+
 ## Architecture overview
 The project follows a medallion-style architecture designed for transparency, reproducibility, and downstream analytics.
+
+## Current Project Status
+
+This project is currently in a strong portfolio-ready state. The core analytics pipeline, clustering workflow, insight analysis, case studies, and visual outputs have been built for ATP match data from 2020 to 2024.
+
+### Completed
+- raw ATP match and player data ingestion
+- cleaned match-level table
+- normalized `fact_player_match` table
+- aggregated `fact_player_season` table
+- clustering-ready player feature table
+- KMeans archetype clustering
+- labeled player archetypes
+- descriptive match-stat insight analyses
+- player case studies
+- player comparison analysis
+- chart pack for insights, surfaces, players, and clusters
 
 ### Bronze layer (raw ingestion)
 - Ingest ATP singles match files from source snapshots
@@ -109,6 +136,33 @@ atp-player-archetypes-databricks/
 └── requirements.txt
 ```
 
+## Visual Outputs
+
+The project includes a chart pack covering:
+
+### Serving insight charts
+- win rate by first serve in percentage bucket
+- win rate by first serve points won bucket
+- win rate by second serve points won bucket
+- win rate by ace bucket
+- win rate by double-fault bucket
+
+### Surface charts
+- average aces by surface
+- average first-serve points won rate by surface
+
+### Player comparison charts
+- Tsitsipas vs Medvedev overall win rate
+- Tsitsipas vs Medvedev serve profile
+- Tsitsipas vs Medvedev surface win rate
+- Tsitsipas vs Medvedev surface ace profile
+
+### Archetype charts
+- player-season counts by archetype
+- average win rate by archetype
+- serve risk/reward profile by archetype
+- serve rate profile by archetype
+
 ## Methodology
 ### 1) Ingestion and ETL
 - Pull and stage historical ATP files from source snapshots
@@ -147,6 +201,34 @@ In parallel with clustering, the project evaluates descriptive relationships bet
 - Build player-level deep dives that combine archetype assignment and trend metrics
 - Generate evidence-based performance insights and practical discussion points
 - Recommendations are framed as analytical guidance, not coaching certainties
+
+## Key Results
+
+### Archetypes identified
+The first clustering pass grouped ATP player-seasons into four broad archetypes:
+
+- High-Risk Big Server
+- Balanced All-Court Player
+- Lower-Power Grinder
+- Elite Big Server
+
+### Descriptive insights
+Some of the strongest patterns found so far:
+
+- higher first-serve-in percentage is associated with higher win rate
+- first-serve points won percentage is very strongly associated with winning
+- second-serve points won percentage is also strongly associated with winning
+- higher ace counts are associated with higher win rates
+- higher double-fault counts are associated with lower win rates
+- grass shows the highest average first-serve win rate and ace production in the sample
+
+### Player case studies
+Two detailed player case studies were built:
+
+- **Stefanos Tsitsipas** — strongest results on clay in this sample
+- **Daniil Medvedev** — strongest results on hard court in this sample
+
+A useful conclusion from the comparison is that two players can share the same broad archetype while still showing very different surface strengths and performance patterns.
 
 ## Planned dashboards / outputs
 - **Player Overview:** profile, trends, and headline KPIs
@@ -226,7 +308,41 @@ This project uses ATP match data made publicly available by Jeff Sackmann.
 
 All credit for source data collection and publication belongs to the original data author/maintainer. Please consult the source repository for current dataset scope and applicable license/usage terms.
 
+## Project Documents
+
+- `docs/results_summary.md`
+- `docs/insights.md`
+- `docs/chart_index.md`
+- `docs/player_case_study_stefanos_tsitsipas.md`
+- `docs/player_case_study_daniil_medvedev.md`
+- `docs/player_comparison_tsitsipas_vs_medvedev.md`
+
 ## Resume-ready project summary
 - Built an end-to-end Databricks analytics pipeline (bronze/silver/gold) for historical ATP singles match data, transforming raw public files into dashboard-ready analytical marts.
 - Engineered player-level and match-level features and implemented clustering-based archetype segmentation (e.g., big server, return specialist, all-court aggressor, baseline grinder).
 - Developed descriptive winning-driver analyses and player case-study outputs, emphasizing rigorous interpretation of correlation-based findings for portfolio-grade analytics communication.
+
+## Limitations
+
+This project is intentionally framed as a historical analytics and portfolio project, not a live production forecasting system.
+
+Key limitations include:
+
+- analysis uses ATP historical data from 2020 to 2024
+- public tennis data has missing context such as injuries, tactics, and coaching decisions
+- clustering provides broad style summaries, not complete player identities
+- descriptive insight analyses show association, not causation
+- some metrics can be sensitive to sample size and match context
+
+## Portfolio Value
+
+This project demonstrates practical, job-relevant skills in:
+
+- Python and pandas-based analysis
+- SQL-ready analytical table design
+- ETL thinking and layered data modeling
+- feature engineering for analytics and clustering
+- player segmentation with unsupervised learning
+- evidence-based interpretation of sports performance data
+- Git/GitHub project organization
+- visual storytelling for analytics portfolios

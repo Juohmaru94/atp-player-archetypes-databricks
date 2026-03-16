@@ -108,3 +108,47 @@ Higher double-fault counts are associated with lower win rates. The relationship
 
 ### Caution
 This is descriptive analysis. It shows association, not proof that reducing double faults alone causes winning.
+
+## Insight 7 — Surface Differences in Serve Performance
+
+### Result
+Average first-serve points won percentage differed by surface:
+- Clay: 68.5%
+- Grass: 74.5%
+- Hard: 72.6%
+
+### Interpretation
+Grass showed the highest average first-serve effectiveness, followed by hard courts, with clay lowest. This suggests that serve dominance is strongest on faster surfaces and weaker on clay.
+
+### Caution
+This is descriptive analysis. Surface effects may also reflect player selection, tournament mix, and match context.
+
+## Insight 8 — Surface Differences in Ace Rates and Match Length
+
+### Result
+Average serving and match-length metrics differed by surface:
+- Clay: 4.04 aces, 2.69 double faults, 116.1 minutes
+- Grass: 8.58 aces, 3.52 double faults, 123.4 minutes
+- Hard: 6.87 aces, 2.85 double faults, 115.1 minutes
+
+### Interpretation
+Grass produced the highest ace volume and the longest average matches in this sample, while clay produced the lowest ace volume. This supports the idea that grass amplifies serve-driven play more than clay.
+
+### Caution
+These are average patterns across the dataset and should not be treated as causal proof.
+
+## Player Case Study 1 — Stefanos Tsitsipas
+
+Stefanos Tsitsipas was classified as an **Elite Big Server** in every season from 2020 to 2024. Across the five-year sample, he posted a 70.1% win rate and averaged 7.25 aces per match.
+
+His strongest results came on clay, where he won 79.6% of matches, while grass was his weakest surface at 58.3% despite his highest ace production. This suggests that raw serve explosiveness alone does not fully explain his best overall performance.
+
+His 2024 season showed signs of decline relative to 2021–2022, including a weaker average ranking, slightly lower win rate, lower ace output, and higher double-fault rate.
+
+## Player Case Study 2 — Daniil Medvedev
+
+Daniil Medvedev was classified as an **Elite Big Server** in every season from 2020 to 2024. Across the five-year sample, he posted a 75.5% win rate and averaged 8.16 aces per match.
+
+His strongest surface was hard court, where he won 77.4% of matches, while clay was his weakest at 65.9%. This makes his profile meaningfully different from Tsitsipas, whose best results came on clay.
+
+His 2021 season was the strongest in the sample, while 2024 showed some decline relative to earlier years, including lower ace output and higher double-fault volume.

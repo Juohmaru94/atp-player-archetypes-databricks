@@ -237,6 +237,51 @@
   - this is descriptive analysis
   - it shows association, not causation
 
+### `win_rate_by_surface`
+- Source: `fact_player_match`
+- Grain: one row per surface
+- Main use:
+  - compare player-match win distribution across surfaces
+
+### `first_serve_points_won_by_surface`
+- Source: `fact_player_match`
+- Grain: one row per surface
+- Main use:
+  - compare first-serve effectiveness across surfaces
+
+### `aces_by_surface`
+- Source: `fact_player_match`
+- Grain: one row per surface
+- Main use:
+  - compare ace volume, double faults, and match duration across surfaces
+
+### `surface_stat_differences`
+- Source: `fact_player_match`
+- Grain: one row per surface
+- Main use:
+  - compare core serve and match metrics across surfaces
+- Notes:
+  - better suited than raw win-rate summaries for the player-match table
+
+### Player case study outputs
+- Source: `fact_player_match` and `player_archetype_clusters_labeled`
+- Main use:
+  - create player-specific summary tables for portfolio case studies
+- Output files:
+  - `{player_name}_case_study_summary.csv`
+  - `{player_name}_case_study_surface.csv`
+  - `{player_name}_case_study_season.csv`
+  - `{player_name}_case_study_clusters.csv`
+
+### Player comparison documents
+- Main use:
+  - compare two player case studies side by side
+  - show how players in the same cluster can still differ in surface strengths and match profile  
+
+### Documentation outputs
+- `results_summary.md` — high-level summary of clustering, descriptive insights, and case studies
+- `chart_index.md` — organized list of visual outputs for the portfolio  
+
 ## Bronze Output
 
 ### `bronze_atp_matches`

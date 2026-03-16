@@ -41,3 +41,21 @@
 - [ ] Add screenshots
 - [ ] Finalize README
 - [ ] Prepare resume bullets
+
+## Phase 6 — Visuals
+- [ ] Create serving insight charts
+- [ ] Create surface comparison charts
+- [ ] Create player comparison charts
+- [ ] Add chart screenshots to README later
+- [ ] Create Tsitsipas vs Medvedev comparison charts
+- [ ] Create surface comparison visuals for case studies
+- [ ] Create archetype count chart
+- [ ] Create archetype win-rate chart
+- [ ] Create archetype serve profile charts
+
+## Phase 7 — Final Project Packaging
+- [ ] Write results summary
+- [ ] Organize chart index
+- [ ] Add results and visuals to README later
+- [ ] Add limitations summary
+- [ ] Prepare final portfolio commit
