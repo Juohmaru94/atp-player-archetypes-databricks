@@ -94,3 +94,105 @@
 ### Player file
 - `atp_players.csv` is a reference table with player-level biographical fields.
 - It can be used to validate or enrich player identity fields later if needed.
+
+### `fact_player_match`
+- Source: `silver_matches_clean`
+- Grain: one row per player per match
+- Logic:
+  - each source match becomes two rows
+  - one row for the winner as player
+  - one row for the loser as player
+- Main use:
+  - player-level aggregation
+  - archetype feature engineering
+  - match stats analysis
+
+### `fact_player_season`
+- Source: `fact_player_match`
+- Grain: one row per player per season
+- Main use:
+  - seasonal player summaries
+  - clustering feature input
+  - player comparison analysis
+- Example metrics:
+  - matches played
+  - wins
+  - win rate
+  - ace per match
+  - double faults per match
+  - first serve in rate
+  - first serve win rate
+  - second serve win rate
+  - break points saved rate
+
+### `player_archetype_features`
+- Source: `fact_player_season`
+- Grain: one row per player per season
+- Filter:
+  - only player-seasons with at least 10 matches played
+- Main use:
+  - input table for archetype clustering
+- Initial feature set:
+  - win rate
+  - average rank
+  - ace per match
+  - double faults per match
+  - first serve in rate
+  - first serve win rate
+  - second serve win rate
+  - break points saved rate
+
+### `player_archetype_clusters`
+- Source: `player_archetype_features`
+- Grain: one row per player per season
+- Method:
+  - standardized numeric features
+  - KMeans clustering with 4 clusters for the first pass
+- Main use:
+  - identify broad player archetypes
+  - compare player styles across seasons
+
+### `cluster_profiles`
+- Source: `player_archetype_clusters`
+- Grain: one row per cluster
+- Main use:
+  - interpret cluster characteristics
+  - compare average performance/style metrics across clusters
+- Includes:
+  - average feature values by cluster
+  - player-season counts
+  - unique player counts
+
+### `player_archetype_clusters_labeled`
+- Source: `player_archetype_clusters`
+- Grain: one row per player per season
+- Main use:
+  - assign human-readable archetype names to each cluster
+- Current first-pass labels:
+  - High-Risk Big Server
+  - Balanced All-Court Player
+  - Lower-Power Grinder
+  - Elite Big Server
+
+## Bronze Output
+
+### `bronze_atp_matches`
+- Source: `atp_matches_2020.csv` to `atp_matches_2024.csv`
+- Grain: one row per match
+- Notes:
+  - raw union of yearly match files
+  - includes added `source_file` column
+  - includes added `season` column
+
+## Silver Output
+
+### `silver_matches_clean`
+- Source: `bronze_atp_matches`
+- Grain: one row per match
+- Key additions:
+  - parsed `tourney_date`
+  - standardized types
+  - created `match_id`
+
+
+
